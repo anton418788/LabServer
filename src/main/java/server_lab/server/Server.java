@@ -101,14 +101,14 @@ public class Server {
         ValidatorId validatorId = new ValidatorId();
         ValidateString validateString = new ValidateString();
 
-        AddClassroomValidator addClassroomsValidator = new AddClassroomValidator(validateString);
+        AddClassroomValidator addClassroomValidator = new AddClassroomValidator(validateString);
 
-        AddClassroomService addClassroomsService = new AddClassroomService(repositoryClassroom);
+        AddClassroomService addClassroomService = new AddClassroomService(repositoryClassroom);
 
 
-        controllerClassroom = new ControllerClassroom(addClassroomsService,
+        controllerClassroom = new ControllerClassroom(addClassroomService,
 
-                addClassroomsValidator);
+                addClassroomValidator);
 
         endpointMap.put("addClassroom", new AddClassroomHandler(controllerClassroom));
 
