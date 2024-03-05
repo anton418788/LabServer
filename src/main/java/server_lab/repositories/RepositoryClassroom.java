@@ -1,7 +1,7 @@
 package server_lab.repositories;
 
 import server_lab.entity.Classroom;
-import server_lab.entity.Group;
+import server_lab.entity.Classroom;
 
 import java.util.List;
 
@@ -14,17 +14,17 @@ public class RepositoryClassroom  {
 
 
     public long addClassroom(Classroom classroom) {
-        long groupId = base.nextGroupId();
-        base.getClassroomMap().put(groupId, classroom);
-        return groupId;
+        long classroomId = base.nextClassroomId();
+        base.getClassroomMap().put(classroomId, classroom);
+        return classroomId;
     }
 
 
-    public Group getClassroomByBuilding(Integer building) {
+    public Classroom getClassroomByBuilding(Integer building) {
         if (!base.getClassroomMap().containsKey(building)) {
             throw new RuntimeException("Object with ID not found");
         }
-        return base.getGroupMap().get(building);
+        return base.getClassroomMap().get(building);
     }
 
 }

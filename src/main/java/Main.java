@@ -26,6 +26,7 @@ public class Main {
         server.initGroup();
         server.initStudent();
         server.initTeacher();
+        server.initClassroom();
 
         try {
             Reader[] readers = {

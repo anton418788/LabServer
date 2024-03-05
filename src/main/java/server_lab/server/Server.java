@@ -1,20 +1,21 @@
 package server_lab.server;
 
+import server_lab.controllers.classroom.ControllerClassroom;
 import server_lab.controllers.group.ControllerGroup;
 import server_lab.controllers.student.ControllerStudent;
 import server_lab.controllers.teacher.ControllerTeacher;
 import server_lab.exception.ServerException;
-import server_lab.repositories.DataBase;
-import server_lab.repositories.RepositoryGroup;
-import server_lab.repositories.RepositoryStudent;
-import server_lab.repositories.RepositoryTeacher;
+import server_lab.repositories.*;
 import server_lab.server.handlers.EndpointHandler;
+import server_lab.server.handlers.classroom.AddClassroomHandler;
 import server_lab.server.handlers.group.*;
 import server_lab.server.handlers.student.*;
 import server_lab.server.handlers.teacher.AddTeacherHandler;
+import server_lab.services.classroom.AddClassroomService;
 import server_lab.services.group.*;
 import server_lab.services.student.*;
 import server_lab.services.teacher.AddTeacherService;
+import server_lab.validator.classroom.AddClassroomValidator;
 import server_lab.validator.group.*;
 import server_lab.validator.primitive.ValidateString;
 import server_lab.validator.primitive.ValidatorId;
@@ -30,6 +31,7 @@ public class Server {
     private ControllerGroup controllerGroup;
     private ControllerStudent controllerStudent;
     private ControllerTeacher controllerTeacher;
+    private ControllerClassroom controllerClassroom;
 
     public Server() {
         this.dataBase = new DataBase();
@@ -92,6 +94,26 @@ public class Server {
 
 
         System.out.println("Teacher init");
+    }
+    public void initClassroom() {
+        RepositoryClassroom repositoryClassroom = new RepositoryClassroom(dataBase);
+
+        ValidatorId validatorId = new ValidatorId();
+        ValidateString validateString = new ValidateString();
+
+        AddClassroomValidator addClassroomsValidator = new AddClassroomValidator(validateString);
+
+        AddClassroomService addClassroomsService = new AddClassroomService(repositoryClassroom);
+
+
+        controllerClassroom = new ControllerClassroom(addClassroomsService,
+
+                addClassroomsValidator);
+
+        endpointMap.put("addClassroom", new AddClassroomHandler(controllerClassroom));
+
+
+        System.out.println("Classroom init");
     }
 
     public void initStudent() {
