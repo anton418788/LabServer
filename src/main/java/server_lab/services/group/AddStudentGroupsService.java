@@ -1,6 +1,6 @@
 package server_lab.services.group;
 
-import server_lab.essence.Group;
+import server_lab.entity.Group;
 import server_lab.repositories.RepositoryGroup;
 import server_lab.request.group.AddStudentGroupsRequest;
 import server_lab.response.group.AddStudentGroupsResponse;

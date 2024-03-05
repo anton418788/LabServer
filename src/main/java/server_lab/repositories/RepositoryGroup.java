@@ -1,6 +1,6 @@
 package server_lab.repositories;
 
-import server_lab.essence.Group;
+import server_lab.entity.Group;
 
 import java.util.List;
 

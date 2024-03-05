@@ -1,6 +1,6 @@
 package server_lab.repositories;
 
-import server_lab.essence.Teacher;
+import server_lab.entity.Teacher;
 
 import java.util.List;
 

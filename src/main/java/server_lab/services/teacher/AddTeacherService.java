@@ -1,6 +1,6 @@
 package server_lab.services.teacher;
 
-import server_lab.essence.Teacher;
+import server_lab.entity.Teacher;
 import server_lab.repositories.RepositoryTeacher;
 import server_lab.request.teacher.AddTeacherRequest;
 import server_lab.response.teacher.AddTeacherResponse;

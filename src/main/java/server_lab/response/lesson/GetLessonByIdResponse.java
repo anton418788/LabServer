@@ -1,6 +1,6 @@
 package server_lab.response.lesson;
 
-import server_lab.essence.Student;
+import server_lab.entity.Student;
 
 import java.time.LocalDate;
 import java.util.Map;

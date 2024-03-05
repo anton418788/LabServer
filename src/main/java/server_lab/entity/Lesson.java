@@ -1,4 +1,4 @@
-package server_lab.essence;
+package server_lab.entity;
 
 import java.time.LocalDate;
 import java.util.Objects;

@@ -1,14 +1,19 @@
-package server_lab.essence;
+package server_lab.entity;
 
 import java.util.Objects;
 
-public class Subject {
+public class Group {
     private Long id;
     private String name;
 
-    public Subject() {}
+    public Group() {}
 
-    public Subject(Long id, String name) {
+
+    public Group(String name) {
+        this.name = name;
+    }
+
+    public Group(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -29,17 +34,20 @@ public class Subject {
         this.name = name;
     }
 
+    public void set(Group group) {
+        setName(group.getName());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Subject discipline = (Subject) o;
-        return Objects.equals(id, discipline.id) && Objects.equals(name, discipline.name);
+        Group group = (Group) o;
+        return Objects.equals(id, group.id) && Objects.equals(name, group.name);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, name);
     }
-
 }

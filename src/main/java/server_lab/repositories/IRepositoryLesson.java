@@ -1,7 +1,7 @@
 package server_lab.repositories;
 
-import server_lab.essence.Lesson;
-import server_lab.essence.VisitingLesson;
+import server_lab.entity.Lesson;
+import server_lab.entity.VisitingLesson;
 import server_lab.exception.RepositoryException;
 
 import java.time.LocalDate;

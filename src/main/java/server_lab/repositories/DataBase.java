@@ -1,6 +1,6 @@
 package server_lab.repositories;
 
-import server_lab.essence.*;
+import server_lab.entity.*;
 
 import java.util.HashMap;
 import java.util.Map;

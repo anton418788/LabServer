@@ -1,6 +1,6 @@
 package server_lab.repositories;
 
-import server_lab.essence.Subject;
+import server_lab.entity.Subject;
 import server_lab.exception.RepositoryException;
 
 import java.util.List;

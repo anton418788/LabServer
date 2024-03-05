@@ -1,6 +1,6 @@
 package server_lab.services.student;
 
-import server_lab.essence.Student;
+import server_lab.entity.Student;
 import server_lab.exception.ServiceException;
 import server_lab.repositories.RepositoryStudent;
 import server_lab.request.student.EditStudentRequest;

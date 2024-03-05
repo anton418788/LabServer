@@ -1,6 +1,6 @@
 package server_lab.repositories;
 
-import server_lab.essence.Subject;
+import server_lab.entity.Subject;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package server_lab.repositories;
 
-import server_lab.essence.Student;
+import server_lab.entity.Student;
 
 import java.util.ArrayList;
 import java.util.List;

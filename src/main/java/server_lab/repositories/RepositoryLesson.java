@@ -1,7 +1,7 @@
 package server_lab.repositories;
 
-import server_lab.essence.Lesson;
-import server_lab.essence.VisitingLesson;
+import server_lab.entity.Lesson;
+import server_lab.entity.VisitingLesson;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
