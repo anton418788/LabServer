@@ -14,6 +14,7 @@ public class DataBase {
     private Map<Long, Teacher> teacherMap;
     private long maxTeacherId;
     private Map<Long, Group> groupMap;
+    private Map<Long, Classroom> classroomMap;
     private long maxGroupId;
     private Map<Long, Subject> subjectMap;
     private Map<Long, Lesson> lessonMap;
@@ -54,6 +55,9 @@ public class DataBase {
 
     public Map<Long, Group> getGroupMap() {
         return groupMap;
+    }
+    public Map<Long, Classroom> getClassroomMap() {
+        return classroomMap;
     }
 
     public Map<Long, Subject> getSubjectMap() {
