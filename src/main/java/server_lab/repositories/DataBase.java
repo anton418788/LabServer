@@ -14,6 +14,7 @@ public class DataBase {
     private Map<Long, Teacher> teacherMap;
     private long maxTeacherId;
     private Map<Long, Group> groupMap;
+    private long maxClassroomId;
     private Map<Long, Classroom> classroomMap;
     private long maxGroupId;
     private Map<Long, Subject> subjectMap;
@@ -36,6 +37,11 @@ public class DataBase {
     public long nextTeacherId() {
         long idRet = maxTeacherId;
         this.maxTeacherId++;
+        return idRet;
+    }
+    public long nextClassroomId() {
+        long idRet = maxClassroomId;
+        this.maxClassroomId++;
         return idRet;
     }
 

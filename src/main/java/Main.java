@@ -30,12 +30,14 @@ public class Main {
         try {
             Reader[] readers = {
 
+                    new Reader("addClassroom::{\"classroom_number\":\"212\",\"capacity\":\"120\",\"number_building\":\"12\"}"),
+                    /*
                     new Reader("addTeacher::{\"surname\":\"Ivanov\",\"name\":\"Igor\",\"patronymic\":\"Ivanovich\"}"),
                     new Reader("addTeacher::{\"surname\":\"\",\"name\":\"Igor\",\"patronymic\":\"Ivanovichhh\"}"),
                     new Reader("addTeacher::{\"surname\":\"Ivanov\",\"name\":\"Igor\",\"patronymic\":\"Ivanovich\"}"),
                     new Reader("addTeacher::{\"surname\":\"Ivanov\",\"name\":\"Igor\",\"patronymic\":\"Ivanovich\"}")
 
-                    /*
+
                     new Reader("addStudentGroups::{\"name\":\"GROUP-102\"}"),
                     new Reader("getStudentGroupById::{\"id\":\"1\"}"),
                     new Reader("editStudentGroups::{\"id\":\"1\",\"name\":\"GROUP-103\"}"),
